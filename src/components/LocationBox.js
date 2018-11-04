@@ -13,7 +13,21 @@ const LocationBox = (props) => {
     return(
         <div className= "app informationBox">
             From LocationBox
+            
+            {/* <div>
+                Polling information for:${address}
+            </div>
+            <div>
+                ${election.name}
+            </div>
+            <div>  
+                Vote here:${pollingAddress.locationName}
+                <br/>
+                ${pollingAddress.line1}, ${pollingAddress.city}, ${pollingAddress.state}
+            </div> */}
+            
         </div>
+        
     );
 
 }
