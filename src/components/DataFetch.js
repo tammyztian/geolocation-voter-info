@@ -13,6 +13,7 @@ class DataFetch extends Component {
     }
 
     componentDidMount(){
+
         fetch(`${MAPS_API}latlng=40.714224,-73.961452&key=${API_KEY}`)
             .then(res=>res.json())
             .then(data => this.setState({address: data.results[0].formatted_address}));
