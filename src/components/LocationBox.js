@@ -7,7 +7,7 @@ const LocationBox = (props) => {
     let election = props.election;
     let address = props.address;
     let pollingHours = props.pollingHours;
-    let pollingLocation = props.pollingLocations;
+    let pollingAddress = props.pollingAddress;
 
 
     return(

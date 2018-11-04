@@ -49,19 +49,18 @@ class DataFetch extends Component {
 
                         this.setState({contests: contests});
                         this.setState({election: election});
-                        this.setState({pollingLocations: pollingLocation});
+                        this.setState({pollingLocation: pollingLocation});
                         this.setState({pollingHours: pollingHours});
-                        // console.log('this is state', this.state);
+                        console.log('this is polling location', this.state.pollingLocation);
                     });
 
                 })
     }
 
     render () {
-        const address = this.state.address;
         return (
             <div>
-               <MainContentBlock address={this.state.address} contests={this.state.contests} election={this.state.election} pollingAddress={this.state.pollingLocations} pollingHours={this.state.pollingHours} />
+               <MainContentBlock address={this.state.address} contests={this.state.contests} election={this.state.election} pollingAddress={this.state.pollingLocation} pollingHours={this.state.pollingHours} />
             </div>
         )
     }
