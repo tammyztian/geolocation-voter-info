@@ -9,11 +9,12 @@ class DataFetch extends Component {
         super(props);
 
         this.state = {
-           address: null,
+           loading: false,
         }
     }
 
     componentDidMount(){
+        this.setState({loading:true})
 
         return fetch(`${MAPS_API}latlng=43.0341686,-87.911936292956912&key=${API_KEY}`)
             .then(res=>res.json())
@@ -51,16 +52,21 @@ class DataFetch extends Component {
                         this.setState({election: election});
                         this.setState({pollingLocation: pollingLocation});
                         this.setState({pollingHours: pollingHours});
-                        console.log('this is polling location', this.state.pollingLocation);
+                        //console.log('this is polling location', this.state.pollingLocation);
+                        this.setState({loading:false});
                     });
 
                 })
     }
 
     render () {
+
+        if (this.state.loading === true) {
+            return <div>Loading...</div>
+        }
         return (
             <div>
-               <MainContentBlock address={this.state.address} contests={this.state.contests} election={this.state.election} pollingAddress={this.state.pollingLocation} pollingHours={this.state.pollingHours} />
+               <MainContentBlock loading={this.state.loading} address={this.state.address} contests={this.state.contests} election={this.state.election} pollingAddress={this.state.pollingLocation} pollingHours={this.state.pollingHours} />
             </div>
         )
     }
