@@ -12,7 +12,7 @@ class App extends Component {
       <div className="App background">
         <Header/>
         <MainContentBlock/>
-          {/*<DataFetch/>*/}
+          <DataFetch/>
           {console.log('this is key', process.env.REACT_APP_API_KEY)}
         {/* <Footer/> */}
       </div>

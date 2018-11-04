@@ -16,7 +16,15 @@ class DataFetch extends Component {
 
         fetch(`${MAPS_API}latlng=40.714224,-73.961452&key=${API_KEY}`)
             .then(res=>res.json())
-            .then(data => this.setState({address: data.results[0].formatted_address}));
+            .then(data => {
+                let address=data.results[0].formatted_address
+                //this.setState({address: data.results[0].formatted_address}));
+                //remove commas from address
+                var removecomma = /,/g;
+                address = address.replace(removecomma, '');
+                //converts spaces into %20
+                address=encodeURI(address);   
+            })
     }
 
     render () {

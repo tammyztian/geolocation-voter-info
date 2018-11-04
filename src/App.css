@@ -53,6 +53,7 @@
 }
 .background{
   background-image: url("./components/Vertical_United_States_Flag.png") ;
-  background-size: contain;
+  height: 1440px;
+  background-size: cover;
 }
 
