@@ -5,10 +5,9 @@ import React from 'react';
 export default function Header () {
     return(
         <div >
-            <h1>
-                Your Polling Place
-                
-            </h1>
+            <h4>   
+                <u>Data is from your current address</u>
+            </h4>
         </div>
         
     )

@@ -1,3 +1,6 @@
+h4{
+  color:#0000EE;
+}
 .App {
   text-align: center;
 }
@@ -39,14 +42,14 @@
 }
 .innerBodyBox{
   
-    border: 25px solid lightslategray;
-    background-color: lightslategray;
+    border: 25px solid white;
+    background-color: white;
     padding: 25px;
     margin: 25px;
     opacity: .9;
 }
 .informationBox{
-  background-color: lightgray;
+  background-color: cornflowerblue;
   padding: 25px;
   margin: 25px;
   opacity: .9;
