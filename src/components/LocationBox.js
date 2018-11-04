@@ -1,13 +1,19 @@
 'use strict';
 
-import React, { Component } from 'react';
+import React  from 'react';
 
 const LocationBox = (props) => {
     console.log('I am calling from LocationBox', props);
+    let election = props.election;
+    let address = props.address;
+    let pollingHours = props.pollingHours;
+    let pollingLocation = props.pollingLocations;
+
+
     return(
-    <div className= "app informationBox">
-    From LocationBox
-    </div>
+        <div className= "app informationBox">
+            From LocationBox
+        </div>
     );
 
 }

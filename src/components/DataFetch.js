@@ -51,7 +51,7 @@ class DataFetch extends Component {
                         this.setState({election: election});
                         this.setState({pollingLocations: pollingLocation});
                         this.setState({pollingHours: pollingHours});
-                        console.log('this is state', this.state);
+                        // console.log('this is state', this.state);
                     });
 
                 })
