@@ -49,8 +49,8 @@ class DataFetch extends Component {
                         let pollingHours = data.pollingLocations[0].pollingHours;
 
                         this.setState({contests: contests});
-                        this.setState({election: election});
-                        this.setState({pollingLocation: pollingLocation});
+                        this.setState({election: election.name});
+                        this.setState({pollingLocation: pollingLocation.locationName});
                         this.setState({pollingHours: pollingHours});
                         //console.log('this is polling location', this.state.pollingLocation);
                         this.setState({loading:false});

@@ -3,28 +3,44 @@
 import React  from 'react';
 
 const LocationBox = (props) => {
-    // console.log('I am calling from LocationBox', props);
-    let election = props.election;
+    //console.log('I am calling from LocationBox', props);
+    let election = props.election
+
     let address = props.address;
     let pollingHours = props.pollingHours;
     let pollingAddress = props.pollingAddress;
 
 
-    return(
+    console.log(pollingAddress);
+
+
+
+    console.log(election);
+
+
+        if (props.loading === true) {
+            return <div>Loading...</div>
+        }
+
+        return(
         <div className= "app informationBox">
             From LocationBox
             
-            {/* <div>
-                Polling information for:${address}
-            </div>
-            <div>
-                ${election.name}
-            </div>
-            <div>  
-                Vote here:${pollingAddress.locationName}
+            <div className='address-container'>
+                Polling information for:
                 <br/>
-                ${pollingAddress.line1}, ${pollingAddress.city}, ${pollingAddress.state}
-            </div> */}
+                {address}
+            </div>
+
+
+            <div className='election'>
+                {election}
+            </div>
+
+
+            <div className='polling-container'>
+                Vote here:{pollingAddress}
+            </div>
             
         </div>
         
