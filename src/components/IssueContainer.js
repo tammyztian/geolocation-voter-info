@@ -1,14 +1,14 @@
 'use strict';
 
-import React, { Component } from 'react';
+import React from 'react';
 
-class IssueContainer extends Component {
-    render () {
+const IssueContainer = (props) => {
+
     return(
     <div className= "app informationBox">
+        {console.log(`1im calling from issuecontainer ${props.contests}`)}
     From IssueContainer
     </div>
     );
-}
 }
 export default IssueContainer

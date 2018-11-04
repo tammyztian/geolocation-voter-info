@@ -11,7 +11,6 @@ class App extends Component {
     return (
       <div className="App background">
         <Header/>
-        <MainContentBlock/>
           <DataFetch/>
           {console.log('this is key', process.env.REACT_APP_API_KEY)}
         {/* <Footer/> */}
