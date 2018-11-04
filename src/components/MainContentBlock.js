@@ -8,9 +8,20 @@ export default function MainContentBlock (props) {
     return(
         <div className="App innerBodyBox">
             <h1>Your Polling Information</h1>
-              <LocationBox loading={props.loading} election={props.election} address={props.address} pollingAddress={props.pollingAddress} pollingHours={props.pollingHours}/>
-
+            <div>
+              @ {props.address}
+            </div>
+              <LocationBox 
+                loading={props.loading} 
+                pollingLocationName={props.pollingLocationName} 
+                election={props.election}
+                electionDate={props.electionDate}
+                address={props.address} 
+                pollingAddress={props.pollingAddress} 
+                pollingHours={props.pollingHours}/>
+            
               <IssueContainer loading={props.loading} contests={props.contests}/>
+
         </div>
       );
     }

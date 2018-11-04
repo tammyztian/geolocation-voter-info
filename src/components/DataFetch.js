@@ -44,13 +44,18 @@ class DataFetch extends Component {
                         console.log(data)
                         let contests = data.contests;
                         let election = data.election;
+                        let electionDate= data.election.electionDay;
+                        let pollingLocationName = `${data.pollingLocations[0].address.locationName}`;
 
-                        let pollingLocation = data.pollingLocations[0].address;
+                    
+                        let pollingLocationAddress= `${data.pollingLocations[0].address.line1} ${data.pollingLocations[0].address.city}, ${data.pollingLocations[0].address.state} ${data.pollingLocations[0].address.zip}`;
                         let pollingHours = data.pollingLocations[0].pollingHours;
 
                         this.setState({contests: contests});
                         this.setState({election: election.name});
-                        this.setState({pollingLocation: pollingLocation.locationName});
+                        this.setState({election: electionDate});
+                        this.setState({pollingLocation: pollingLocationAddress});
+                        this.setState({pollingLocationName: pollingLocationName})
                         this.setState({pollingHours: pollingHours});
                         //console.log('this is polling location', this.state.pollingLocation);
                         this.setState({loading:false});
@@ -66,7 +71,14 @@ class DataFetch extends Component {
         }
         return (
             <div>
-               <MainContentBlock loading={this.state.loading} address={this.state.address} contests={this.state.contests} election={this.state.election} pollingAddress={this.state.pollingLocation} pollingHours={this.state.pollingHours} />
+               <MainContentBlock 
+                loading={this.state.loading} 
+                address={this.state.address} 
+                electionDate={this.state.electionDate} 
+                pollingLocationName={this.state.pollingLocationName} 
+                contests={this.state.contests} election={this.state.election} 
+                pollingAddress={this.state.pollingLocation} 
+                pollingHours={this.state.pollingHours} />
             </div>
         )
     }
