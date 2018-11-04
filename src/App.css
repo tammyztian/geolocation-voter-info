@@ -30,3 +30,29 @@
     transform: rotate(360deg);
   }
 }
+.outerBodyBox{
+  
+  background-color: blue;
+  padding: 25px;
+  margin: 25px;
+  opacity: 1.0;
+}
+.innerBodyBox{
+  
+    border: 25px solid lightslategray;
+    background-color: lightslategray;
+    padding: 25px;
+    margin: 25px;
+    opacity: .9;
+}
+.informationBox{
+  background-color: lightgray;
+  padding: 25px;
+  margin: 25px;
+  opacity: .9;
+}
+.background{
+  background-image: url("./components/Vertical_United_States_Flag.png") ;
+  background-size: contain;
+}
+

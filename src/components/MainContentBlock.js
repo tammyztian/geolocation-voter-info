@@ -7,7 +7,7 @@ import CandidateMainContainer from './CandidateMainContainer';
 
 export default function MainContentBlock () {
     return(
-        <div className="App">
+        <div className="App innerBodyBox">
         <p>from MainContentBlock</p>
         
           <LocationBox/>

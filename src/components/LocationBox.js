@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 class LocationBox extends Component {
     render () {
     return(
-    <div className= "app">
+    <div className= "app informationBox">
     From LocationBox
     </div>
     );

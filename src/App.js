@@ -5,10 +5,11 @@ import Header from './components/Header'
 import DataFetch from './components/DataFetch'
 import MainContentBlock from './components/MainContentBlock'
 
+
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="App background">
         <Header/>
         <MainContentBlock/>
           {/*<DataFetch/>*/}

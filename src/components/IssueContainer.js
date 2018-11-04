@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 class IssueContainer extends Component {
     render () {
     return(
-    <div className= "app">
+    <div className= "app informationBox">
     From IssueContainer
     </div>
     );
