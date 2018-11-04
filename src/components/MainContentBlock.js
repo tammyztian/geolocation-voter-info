@@ -8,7 +8,7 @@ import CandidateMainContainer from './CandidateMainContainer';
 export default function MainContentBlock () {
     return(
         <div className="App innerBodyBox">
-        <p>from MainContentBlock</p>
+        <h1>Your Polling Information</h1>
         
           <LocationBox/>
           <IssueContainer/>
